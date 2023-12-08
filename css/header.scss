@@ -1,0 +1,191 @@
+:root {
+  /*--text: rgb(240 142 128);*/
+  /*--text: rgb(50 106 50);*/
+  --text: rgb(98, 115, 61);
+  /*--background: rgb(253 240 230);*/
+  /*--background: rgb(230 253 234);*/
+  /*--background: rgba(186, 217, 139, .3);*/
+  --background: rgb(231 240 218);
+  /*--background: rgb(191, 186, 168);*/
+  --gray: #85888C;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.header {
+  background-color: var(--background);
+  box-shadow: 1px 1px 5px 0 var(--gray);
+  font-family: 'Crimson Text', serif;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+/* Logo */
+.logo {
+  display: inline-block;
+  color: var(--text);
+  font-size: 60px;
+  margin-left: 10px;
+}
+
+
+.nav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: var(--background);
+  overflow: hidden;
+
+}
+
+.menu a {
+  color: var(--text);
+  display: block;
+  padding: 30px;
+}
+
+.menu a:hover {
+  background-color: var(--gray);
+}
+
+.nav {
+  max-height: 0;
+  transition: max-height .5s ease-out;
+}
+
+.hamb {
+  cursor: pointer;
+  float: right;
+  padding: 40px 20px;
+}
+
+/* Style label tag */
+
+.hamb-line {
+  background: var(--text);
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+
+}
+
+/* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after {
+  background: var(--text);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.hamb-line::before {
+  top: 5px;
+}
+
+.hamb-line::after {
+  top: -5px;
+}
+
+.side-menu {
+  display: none;
+}
+
+/* Hide checkbox */
+
+.side-menu:checked ~ nav {
+  max-height: 100%;
+}
+
+.side-menu:checked ~ .hamb .hamb-line {
+  background: transparent;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    max-height: none;
+    top: 0;
+    position: relative;
+    float: right;
+    width: fit-content;
+    background-color: transparent;
+  }
+  .menu li {
+    float: left;
+  }
+  .menu a:hover {
+    background-color: transparent;
+    color: var(--gray);
+
+  }
+
+  .hamb {
+    display: none;
+  }
+}
+
+
+/*!* Sub nav *!*/
+/*.subnav-content {*/
+/*    background-color:  var(--text);*/
+/*    width: 100%;*/
+/*    z-index: 1;*/
+/*    padding: 20px 0 ;*/
+/*    display: none;*/
+/*  }*/
+/*.subnav-content a {*/
+/*    color: var(--background);*/
+/*    text-decoration: none;*/
+/*    padding: 0;*/
+/*    margin: 10px 0;*/
+/*    text-align: center;*/
+/*}*/
+/*.subnav:hover .subnav-content {*/
+/*    display: block;*/
+/*}*/
+/*....*/
+/*@media (min-width: 768px) {*/
+/*   ....*/
+/*    !* Sub nav *!*/
+/*    .subnav-content {*/
+/*        padding: 20px 0 ;*/
+/*        display: none;*/
+/*        background-color:  var(--background);*/
+/*    }*/
+/*    .subnav-content a {*/
+/*        color: white;*/
+/*    }*/
+/*}*/

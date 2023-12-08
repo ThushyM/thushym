@@ -1,4 +1,24 @@
+### react ###
+
 .sass-cache/
 *.css.map
 *.sass.map
 *.scss.map
+
+.DS_*
+.idea/
+*.log
+logs
+**/*.backup.*
+**/*.back.*
+
+node_modules
+bower_components
+dist
+.cache
+
+*.sublime*
+
+psd
+thumb
+sketch
