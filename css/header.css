@@ -51,7 +51,6 @@ ul {
 
 .nav {
   width: 100%;
-  height: calc(100vh - 84px);
   position: fixed;
   background-color: var(--background);
   overflow: hidden;
@@ -116,7 +115,7 @@ ul {
 /* Hide checkbox */
 .side-menu:checked ~ nav {
   max-height: 100%;
-}
+  height: calc(100vh - 84px);
 
 .side-menu:checked ~ .hamb .hamb-line {
   background: transparent;
