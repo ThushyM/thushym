@@ -1,3 +1,27 @@
+:root {
+  /*--text: rgb(240 142 128);*/
+  /*--text: rgb(50 106 50);*/
+  --text: rgb(51, 51, 51);
+  /*--background: rgb(253 240 230);*/
+  /*--background: rgb(230 253 234);*/
+  /*--background: rgba(186, 217, 139, .3);*/
+  --background: rgb(254, 254, 254);
+  /*--background: rgb(171 115 220);*/
+  /*--background: rgb(191, 186, 168);*/
+  --gray: #85888C;
+  --pink-light: #D096D9;
+  --pink-dark: #AF71C9;
+  --purple-light: #8A6ABA;
+  --purple-dark: #645C99;
+  --gold-dark: #AD9050;
+  --gold: #D1B660;
+  --gold-light: #E8D86F;
+}
+
+b {
+  font-family: Helvetica, Arial, SansSerif;
+}
+
 h1,
 h2,
 h3,
@@ -9,16 +33,21 @@ h6 {
   max-width: 45ch;
 }
 
+button {
+  padding: 12px;
+}
+
 p {
+  font-family: "Open Sans", serif;
   max-width: 60ch;
+  color: #555555;
 }
 
 section {
-  align-items: center;
+  /*align-items: center;*/
   display: flex;
   flex-direction: column;
   padding: 12px;
-  text-align: center;
 }
 
 .off-white {
@@ -26,10 +55,68 @@ section {
   color: var(--text);
 }
 
+.background-contrast {
+  background-color: #6d41a1;
+}
+
+.background-contrast-hi {
+  background-color: #462a68;
+}
+
+.badge {
+  max-width: 120px;
+}
+
 .connect a {
   background-color: var(--text);
   color: #fff;
   padding: 8px 24px;
 }
+.headline h1 {
+  line-height: 1;
+  font-size: 3em;
+  font-weight: bold;
+}
 
-/*# sourceMappingURL=styles.css.map */
+.underline {
+  text-decoration: underline;
+  text-decoration-color: var(--gold-dark);
+  text-underline-offset: 0.4em;
+  text-decoration-thickness: 3px;
+}
+
+.center {
+  align-items: center;
+}
+
+.linkedin {
+  fill: #fff;
+  width: 48px;
+}
+
+.call {
+  background-color: var(--gold);
+  border: 0;
+  border-radius: .25rem;
+  margin: 12px 0;
+}
+
+footer {
+  font-family: Helvetica, Arial, SansSerif;
+  background-color: #2e2e2e;
+  background-color: var(--purple-dark);
+  color: white;
+  padding: 12px;
+}
+
+footer h3 {
+  font-family: Helvetica, Arial, SansSerif;
+  font-size: 1.5em;
+  margin: 12px;
+}
+footer a {
+  font-style: normal;
+  color: white;
+  text-decoration: underline;
+  text-underline: white;
+}
