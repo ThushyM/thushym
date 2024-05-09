@@ -1,4 +1,12 @@
 :root {
+  --text: rgb(46, 16, 101);
+  --text-dark-bg: rgb(254, 254, 254);
+  --dark-purple: rgb(59, 7, 100);
+  --purple: rgb(126, 34, 206);
+  --yellow: rgb(126, 34, 206);
+  --light-yellow: rgb(254, 249, 195);
+  --dark-compliment: rgb(252, 211, 77);
+  --light-compliment: rgb(168, 85, 247);
   /*--text: rgb(240 142 128);*/
   /*--text: rgb(50 106 50);*/
   --text: rgb(51, 51, 51);
@@ -34,12 +42,13 @@ h5,
 h6 {
   font-family: "Helvetica Neue", Arial, SansSerif;
   /*font-family: "Crimson Text", serif;*/
-  font-weight: normal;
+  font-weight: bold;
   max-width: 45ch;
 }
 
 img {
   max-width: 100%;
+  border-radius: 6px;
 }
 
 button {
@@ -53,11 +62,20 @@ p {
   color: #555555;
 }
 
+p + p {
+  padding-top: 16px;
+}
+
+.col-2 {
+  columns: auto 2;
+}
+
 section {
   /*align-items: center;*/
   display: flex;
   flex-direction: column;
-  padding: 12px;
+  padding: 24px 12px;
+  scroll-margin-top: 4em;
 }
 
 .off-white {
@@ -85,11 +103,17 @@ section {
   max-width: 120px;
 }
 
-.connect {
-  padding: 12px;
+.text-center {
+  text-align: center;
 }
+
+.center {
+  align-items: center;
+}
+
 .connect h2 {
   margin: 12px 0 12px;
+  color: #fff;
 }
 .connect a {
   margin-top: 24px;
@@ -105,6 +129,17 @@ section {
   line-height: 1;
   font-size: 3em;
   font-weight: bold;
+}
+
+.call {
+  display: inline-block;
+  background-color: var(--light-compliment);
+  color: var(--text-dark-bg);
+  border: 0;
+  border-radius: 0.25rem;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 8px 24px;
 }
 
 @media (min-width: 992px) {
@@ -125,25 +160,15 @@ section {
 }
 
 .linkedin {
-  fill: #fff;
+  fill: #333;
   width: 48px;
-}
-
-.call {
-  background-color: var(--gold);
-  border: 0;
-  border-radius: 0.25rem;
-  margin: 12px 0;
-  padding: 12px;
-  text-align: center;
-  color: black;
 }
 
 .services {
   background-color: #fef9c3;
 }
 .services h2 {
-  padding: 16px 0 24px;
+  padding: 8px 0 24px;
   font-weight: bold;
 }
 .services h3 {
@@ -164,9 +189,6 @@ section {
 
 footer {
   font-family: Helvetica, Arial, SansSerif;
-  background-color: #2e2e2e;
-  background-color: var(--purple-dark);
-  color: white;
   padding: 12px;
 }
 footer h3 {
@@ -176,9 +198,7 @@ footer h3 {
 }
 footer a {
   font-style: normal;
-  color: white;
   text-decoration: underline;
-  text-underline: white;
 }
 
 @media (min-width: 768px) {
