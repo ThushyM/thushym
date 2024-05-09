@@ -21,7 +21,7 @@
 
 body {
   background-color: #fafafa;
-  font-family: "Poppins", sans-serif;
+  /*font-family: "Poppins", sans-serif;*/
 }
 
 a {
@@ -35,7 +35,6 @@ ul {
 .header {
   background-color: var(--background);
   box-shadow: 1px 1px 5px 0 var(--gray);
-  font-family: "Crimson Text", serif;
   position: sticky;
   top: 0;
   width: 100%;
@@ -45,13 +44,11 @@ ul {
 .logo {
   display: inline-block;
   color: var(--text);
-  font-size: 60px;
+  font-size: 24px;
   margin-left: 10px;
 }
 
 .nav {
-  width: 100%;
-  position: fixed;
   background-color: var(--background);
   overflow: hidden;
   align-content: flex-end;
@@ -76,7 +73,7 @@ ul {
 .hamb {
   cursor: pointer;
   float: right;
-  padding: 40px 20px;
+  padding: 24px 20px;
 }
 
 /* Style label tag */
@@ -115,7 +112,10 @@ ul {
 /* Hide checkbox */
 .side-menu:checked ~ nav {
   max-height: 100%;
+  width: 100%;
   height: calc(100vh - 84px);
+  position: fixed;
+}
 
 .side-menu:checked ~ .hamb .hamb-line {
   background: transparent;
