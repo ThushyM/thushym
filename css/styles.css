@@ -66,10 +66,6 @@ p + p {
   padding-top: 16px;
 }
 
-.col-2 {
-  columns: auto 2;
-}
-
 section {
   /*align-items: center;*/
   display: flex;
@@ -202,6 +198,9 @@ footer a {
 }
 
 @media (min-width: 768px) {
+  .col-2 {
+    columns: auto 2;
+  }
   .services ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

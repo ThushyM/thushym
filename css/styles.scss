@@ -73,9 +73,7 @@ p + p {
   padding-top: 16px;
 }
 
-.col-2 {
-  columns: auto 2;
-}
+
 section {
   /*align-items: center;*/
   display: flex;
@@ -112,6 +110,7 @@ section {
 .badge {
   max-width: 120px;
 }
+
 .text-center {
   text-align: center;
 }
@@ -180,7 +179,6 @@ section {
 }
 
 
-
 .services {
   background-color: #fef9c3;
 
@@ -188,11 +186,13 @@ section {
     padding: 8px 0 24px;
     font-weight: bold;
   }
+
   h3 {
     padding: 12px 0 8px;
     font-weight: bold;
   }
-  li{
+
+  li {
     margin-bottom: 36px;
   }
 
@@ -228,6 +228,9 @@ footer {
 }
 
 @media (min-width: 768px) {
+  .col-2 {
+    columns: auto 2;
+  }
   .services {
     ul {
       display: grid;
@@ -235,4 +238,5 @@ footer {
       gap: 2.4em;
     }
   }
+
 }
